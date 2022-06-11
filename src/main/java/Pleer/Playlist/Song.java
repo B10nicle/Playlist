@@ -1,11 +1,15 @@
-package Playlist;
+package Pleer.Playlist;
+
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
 public record Song(String title, String artist, Double duration) {
 
+    @Contract(pure = true)
     @Override
-    public String toString() {
+    public @NotNull String toString() {
         return title + " - " + artist + ", " + duration;
     }
 
